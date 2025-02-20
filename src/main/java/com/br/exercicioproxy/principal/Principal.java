@@ -12,9 +12,9 @@ public class Principal {
 
     public static void main(String[] args) {
         Usuario usuarioLogado = new Usuario("carlos", "senha456");
-        usuarioLogado.adicionarOperacao("sacar");
-        usuarioLogado.adicionarOperacao("depositar");
-        usuarioLogado.adicionarOperacao("emitirExtrato");
+        usuarioLogado.adicionarOperacaoPermitida("sacar");
+        usuarioLogado.adicionarOperacaoPermitida("depositar");
+        usuarioLogado.adicionarOperacaoPermitida("emitirExtrato");
 
         UsuarioLogadoSingleton.getInstancia().setUsuario(usuarioLogado);
         ContaCorrenteProxy proxy = new ContaCorrenteProxy(1500.00);

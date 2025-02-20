@@ -1,6 +1,7 @@
 package com.br.exercicioproxy.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -11,12 +12,12 @@ public class Usuario {
 
     private final String nome;
     private final String senha;
-    private final List<String> operacoes;
+    private final List<String> operacoesPermitidas;
 
     public Usuario(String nome, String senha) {
         this.nome = nome;
         this.senha = senha;
-        this.operacoes = new ArrayList<>();
+        this.operacoesPermitidas = new ArrayList<>();
     }
 
     public String getNome() {
@@ -28,11 +29,11 @@ public class Usuario {
     }
 
     public List<String> getOperacoes() {
-        return operacoes;
+        return Collections.unmodifiableList(operacoesPermitidas);
     }
 
-    public void adicionarOperacao(String operacao) {
-        operacoes.add(operacao);
+    public void adicionarOperacaoPermitida(String operacao) {
+        operacoesPermitidas.add(operacao);
     }
 
 }
