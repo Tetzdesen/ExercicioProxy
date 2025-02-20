@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author tetzner
  */
-public class ContaCorrente implements IContaCorrente {
+class ContaCorrente implements IContaCorrente {
 
     private double saldo;
     private final List<String> transacoes;
